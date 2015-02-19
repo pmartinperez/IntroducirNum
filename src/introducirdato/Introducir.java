@@ -16,7 +16,7 @@ public class Introducir {
      * @param num si num=0 introduces por teclado, si num=1 por pantalla
      * @return devuelve el numero introducido
      */
-    public int introducirDato(int num){
+    public static int introducirDato(int num){
         Scanner dato=new Scanner(System.in);
         int op=0;
                
