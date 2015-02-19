@@ -1,18 +1,30 @@
 
 package introducirdato;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 
 public class Introducir {
     //metodo para introducir numero por teclado
-    public int introducirDato(){
-        String respuesta = JOptionPane.showInputDialog("Introducir num");
-        int numero = Integer.parseInt(respuesta);
-        String respuesta2 = JOptionPane.showInputDialog("Introducir num");
-        int numero2 = Integer.parseInt(respuesta2);
-        
-        return numero+numero2;
+    public int introducirDato(int num){
+               Scanner dato=new Scanner(System.in);
+        int op=0;
+               
+        switch(num){
+            case 0: op=dato.nextInt();
+                System.out.println(op);
+                break;
+            case 1: op=Integer.parseInt(JOptionPane.showInputDialog("Introduce un número"));
+                JOptionPane.showMessageDialog(null, op);
+                break;
+            default: op=0;
+                break;
+                       
+        }
+        return op;
+    }
     }
     
-}
+
+
